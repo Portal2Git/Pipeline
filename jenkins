@@ -1,0 +1,46 @@
+pipeline {
+	agent any
+
+	environment {
+		NAME = "PipeLine"
+	}
+	
+
+	stages {
+		
+		stage('Build') {
+			steps {
+				sh '''
+					echo "---------------------Test Started----------------------"
+					ll
+					echo "---------------------Test Finished----------------------"
+				'''
+			}
+		}
+		stage('Test') {
+			steps {
+				sh '''
+					echo "---------------------Test Started----------------------"
+					result=`grep "Hello" index.html |wc -l`
+					echo $result
+					if  [ "$result" = "1" ]
+					then
+					 echo "Test Passed"
+					else	
+					 echo "Test Failed"
+					 exit 1
+					fi
+					echo "---------------------Test Finished----------------------"
+				'''
+			}
+		}
+		stage('Deploy') {
+			steps {
+				sh echo "---------------------Deployment Started----------------------"
+				sh ls -la
+				sh cp -f index.html /var/www/html/index.html
+				sh echo "---------------------Deployment Finished----------------------"
+			}
+		}
+	}
+}
