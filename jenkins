@@ -11,9 +11,9 @@ pipeline {
 		stage('Build') {
 			steps {
 				sh '''
-					echo "---------------------Test Started----------------------"
+					echo "---------------------Build Started----------------------"
 					ls -la
-					echo "---------------------Test Finished----------------------"
+					echo "---------------------Build Finished----------------------"
 				'''
 			}
 		}
