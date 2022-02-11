@@ -12,7 +12,7 @@ pipeline {
 			steps {
 				sh '''
 					echo "---------------------Test Started----------------------"
-					ll
+					ls -la
 					echo "---------------------Test Finished----------------------"
 				'''
 			}
