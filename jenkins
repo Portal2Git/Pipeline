@@ -36,10 +36,12 @@ pipeline {
 		}
 		stage('Deploy') {
 			steps {
-				sh echo "---------------------Deployment Started----------------------"
-				sh ls -la
-				sh cp -f index.html /var/www/html/index.html
-				sh echo "---------------------Deployment Finished----------------------"
+				sh '''				
+					echo "---------------------Deployment Started----------------------"
+					ls -la
+					cp -f index.html /var/www/html/index.html
+					echo "---------------------Deployment Finished----------------------"
+				'''
 			}
 		}
 	}
