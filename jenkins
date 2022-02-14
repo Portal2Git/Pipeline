@@ -33,7 +33,7 @@ pipeline {
 					 echo "Test Failed"
 					 exit 1
 					fi
-					ansible -i hosts.txt all -m ping
+					ansible -i $HOME/ansible/hosts.txt all -m ping
 					echo "---------------------Test Finished----------------------"
 				'''
 			}
