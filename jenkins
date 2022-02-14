@@ -13,6 +13,9 @@ pipeline {
 				sh '''
 					echo "---------------------Build Started----------------------"
 					ls -la
+					cat index.html
+					echo "Builded by Jenkins. Build # $BUILD_ID" >> index.html
+					cat index.html
 					echo "---------------------Build Finished----------------------"
 				'''
 			}
