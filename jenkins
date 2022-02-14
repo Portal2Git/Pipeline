@@ -34,7 +34,7 @@ pipeline {
 					 exit 1
 					fi
 					echo $HOME
-					ansible -i $HOME/ansible/hosts.txt all -m ping
+					ansible -i /home/se/ansible/hosts.txt all -m ping
 					echo "---------------------Test Finished----------------------"
 				'''
 			}
