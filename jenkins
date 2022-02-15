@@ -42,10 +42,10 @@ pipeline {
 				sh '''				
 					echo "---------------------Deployment Started----------------------"
 					ls -la
-					archiveArtifacts artifacts: 'index.html', followSymlinks: false
 					cp -f index.html /var/www/html/index.html
 					echo "---------------------Deployment Finished----------------------"
 				'''
+				archiveArtifacts artifacts: 'index.html', followSymlinks: false
 			}
 		}
 	}
