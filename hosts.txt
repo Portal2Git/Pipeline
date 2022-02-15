@@ -1,0 +1,6 @@
+
+[staging_servers]
+SJ ansible_host=192.168.1.1 ansible_user=se ansible_ssh_private_key_file='/home/se/ansible/id_rsa'
+
+[staging_servers]
+vm2 ansible_host=192.168.1.120 ansible_user=se ansible_ssh_private_key_file='/home/se/ansible/id_rsa'

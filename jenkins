@@ -36,7 +36,7 @@ pipeline {
 					echo $HOME
 					echo ${HOME}
 					whoami
-					ansible -i /home/se/ansible/hosts.txt all -m ping -vvv
+					ansible -i hosts.txt all -m ping -vvv
 					echo "---------------------Test Finished----------------------"
 				'''
 			}
